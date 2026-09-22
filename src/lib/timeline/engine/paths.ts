@@ -68,7 +68,7 @@ export function bridgePathCurved(
 
   // The control point of the fall, pulling the line in its direction to create the curve.
   const fallQuadraticBezierControlPoint = `${endX} ${laneY}`;
-  // Then end point, where the curve ends on the axis/baseline
+  // Then end point, where the curve ends on the baseline/axis
   const fallQuandraticBezierEndPoint = `${endX} ${axisY}`;
 
   return `
