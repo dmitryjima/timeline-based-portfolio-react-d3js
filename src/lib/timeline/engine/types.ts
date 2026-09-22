@@ -26,8 +26,8 @@ export interface TimelineNode extends TimelineNodeData {
   side: DisplaySide;
   startX: number; // point on the baseline/axis where the bridge/stem originates
   endX?: number; // point on the baseline/axis where the bridge returns back (only for `commitment` with endDate)
-  lane: number;
-  laneY: number; // deterministic target y for this node's lane (pre-jitter)
+  laneIndex: number; // index of the lane from 0 to N
+  laneY: number; // acutal coordinate y for the node's lane
 }
 
 // Year and month ticks on the timeline map
