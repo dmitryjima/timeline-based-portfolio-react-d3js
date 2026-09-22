@@ -38,7 +38,7 @@ export function assignLanes(
 
   const result = new Map<string, LaneAssignment>();
 
-  for (const n of sortedNodes) {
+  for (const node of sortedNodes) {
     // When no side is preferred, we start with the side that currently has fewer lanes
     // This would keep the timeline map more balanced across the baseline/axis
     const lessUsedSide: DisplaySide =
@@ -47,8 +47,8 @@ export function assignLanes(
     // If node has a preferred side, we try it firs.
     // Otherwise, try the currently less-used side first.
     // In both cases, the opposite side is the fallback
-    const sidesToTry: DisplaySide[] = n.preferredSide
-      ? [n.preferredSide, getOppositeSide(n.preferredSide)]
+    const sidesToTry: DisplaySide[] = node.preferredSide
+      ? [node.preferredSide, getOppositeSide(node.preferredSide)]
       : [lessUsedSide, getOppositeSide(lessUsedSide)];
 
     let placed = false;
@@ -59,9 +59,9 @@ export function assignLanes(
       // Find the first existing lane whose previous node leaves
       // enough horizontal space before this node starts.
       for (let i = 0; i < lanes.length; i++) {
-        if (lanes[i] + requiredGapMs <= n.startMs) {
-          lanes[i] = n.endMs;
-          result.set(n.id, { side, laneIndex: i });
+        if (lanes[i] + requiredGapMs <= node.startMs) {
+          lanes[i] = node.endMs;
+          result.set(node.id, { side, laneIndex: i });
           placed = true;
           break;
         }
@@ -77,9 +77,9 @@ export function assignLanes(
       // because they overlap the node. Thuts, we create a new lane on the first side from `sidesToTry`
       const side = sidesToTry[0];
 
-      laneEnds[side].push(n.endMs);
+      laneEnds[side].push(node.endMs);
 
-      result.set(n.id, {
+      result.set(node.id, {
         side,
         laneIndex: laneEnds[side].length - 1,
       });
