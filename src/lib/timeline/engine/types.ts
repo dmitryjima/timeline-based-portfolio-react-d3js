@@ -21,13 +21,12 @@ export interface TimelineNodeData {
 
 export interface TimelineNode extends TimelineNodeData {
   x: number; // x-axis position for the `NodeCard`
-  y: number; // y-axis position for the `NodeCard`
+  y: number; // y-axis position for the `NodeCard`, i.e. y of its lane
 
   side: DisplaySide;
   startX: number; // point on the baseline/axis where the bridge/stem originates
   endX?: number; // point on the baseline/axis where the bridge returns back (only for `commitment` with endDate)
   laneIndex: number; // index of the lane from 0 to N
-  laneY: number; // acutal coordinate y for the node's lane
 }
 
 // Year and month ticks on the timeline map
