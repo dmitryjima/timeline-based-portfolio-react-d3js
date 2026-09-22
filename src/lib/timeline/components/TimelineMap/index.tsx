@@ -77,6 +77,12 @@ const TimelineMap: React.FC<Props> = ({ data, onNodeExpand }) => {
     }
   }, [contentWidth, axisY, data, handleSetNodes, handleUpdateTicks]);
 
+  useEffect(() => {
+    return () => {
+      timelineEngineInstanceRef.current?.destroy();
+    };
+  }, []);
+
   return (
     <div className={styles["scroll-wrapper"]} ref={scrollElementRef}>
       {contentWidth === 0 || scrollWrapperHeight === 0 ? null : (
