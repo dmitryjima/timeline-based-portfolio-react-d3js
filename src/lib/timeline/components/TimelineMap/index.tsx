@@ -32,7 +32,7 @@ const TimelineMap: React.FC<Props> = ({ data, onNodeExpand }) => {
     useMeasure<HTMLDivElement>();
 
   const [nodes, setNodes] = useState<TimelineNode[]>([]);
-  const handleSetStatefulNodes = useCallback((updatedNodes: TimelineNode[]) => {
+  const handleSetNodes = useCallback((updatedNodes: TimelineNode[]) => {
     setNodes(updatedNodes);
   }, []);
 
@@ -68,14 +68,14 @@ const TimelineMap: React.FC<Props> = ({ data, onNodeExpand }) => {
         domainEnd: new Date(),
         width: contentWidth,
         axisY,
-        handleSetStatefulNodes,
-        handleUpdateTicks,
+        onUpdateNodes: handleSetNodes,
+        onUpdateTicks: handleUpdateTicks,
       });
     } else {
       // Run `resize` method on change
       timelineEngineInstanceRef.current.resize(contentWidth, axisY);
     }
-  }, [contentWidth, axisY, data, handleSetStatefulNodes, handleUpdateTicks]);
+  }, [contentWidth, axisY, data, handleSetNodes, handleUpdateTicks]);
 
   return (
     <div className={styles["scroll-wrapper"]} ref={scrollElementRef}>
