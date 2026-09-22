@@ -63,6 +63,8 @@ const NodeCard: React.FC<Props> = ({ node, onExpand }) => {
       })}
       style={{
         left: `${node.x}px`,
+        // Makes sure that the card is centered vertically
+        // we avoid transform(-50%, -50%) for both x and y to make sure the card always opens downwards
         top: `calc(${node.y}px - ${CARD_CLOSED_HEIGHT_PX / 2}px)`,
       }}
     >
