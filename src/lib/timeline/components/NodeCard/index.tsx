@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import styles from "./styles.module.scss";
 import classNames from "classnames/bind";
-import { CARD_WIDTH_PX } from "../../engine/constants";
+import { CARD_CLOSED_HEIGHT_PX, CARD_WIDTH_PX } from "../../engine/constants";
 import { type TimelineNode } from "../../engine/types";
 import formatNodeTime from "../../../utls/formatNodeTime";
 
@@ -63,7 +63,7 @@ const NodeCard: React.FC<Props> = ({ node, onExpand }) => {
       })}
       style={{
         left: `${node.x}px`,
-        top: `${node.y}px`,
+        top: `calc(${node.y}px - ${CARD_CLOSED_HEIGHT_PX / 2}px)`,
       }}
     >
       <button
@@ -72,7 +72,7 @@ const NodeCard: React.FC<Props> = ({ node, onExpand }) => {
         className={cx(styles["card-button"], {
           commitment: node.type === "commitment",
           project: node.type === "project",
-          preview: previewOpen,
+          open: previewOpen,
         })}
         style={
           {

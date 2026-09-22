@@ -3,6 +3,8 @@ export const TIMELINE_HORIZONTAL_PADDING_PX = 80;
 
 // Width of the `NodeCard` in px
 export const CARD_WIDTH_PX = 260;
+// Height of the `NodeCard` in its initial state
+export const CARD_CLOSED_HEIGHT_PX = 68;
 
 // Timeline lanes' size - how far the items on the row/lane are from the baseline/axis
 // Distance of lane 0 from the baseline axis

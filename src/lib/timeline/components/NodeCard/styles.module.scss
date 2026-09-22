@@ -2,7 +2,7 @@
 
 .wrapper {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 1;
 
   flex-shrink: 0;
@@ -44,7 +44,7 @@
       border-right-color: var(--node-card-color-border--focus);
     }
 
-    &.preview {
+    &.open {
       transform: scale(1.03);
     }
 

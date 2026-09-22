@@ -4,7 +4,6 @@ declare const classNames: {
   readonly "card-button": "card-button";
   readonly commitment: "commitment";
   readonly project: "project";
-  readonly preview: "preview";
   readonly content: "content";
   readonly "thumbnail-wrapper": "thumbnail-wrapper";
   readonly hidden: "hidden";
