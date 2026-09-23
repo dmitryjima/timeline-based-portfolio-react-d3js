@@ -17,8 +17,8 @@ export const LANE_BASE_OFFSET_PX = 90;
 // Additional distance per lane
 export const LANE_GAP_PX = 110;
 
-// Timeline horizontal paddings
+// Timeline horizontal space between years
 // Below this density, we scroll instead of squeezing further
-export const MIN_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX = 70;
+export const MIN_TIMELINE_HORIZONTAL_SPACE_PER_YEAR_PX = 70;
 // Above this density, we stop stretching and center instead
-export const MAX_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX = 180;
+export const MAX_TIMELINE_HORIZONTAL_SPACE_PER_YEAR_PX = 180;

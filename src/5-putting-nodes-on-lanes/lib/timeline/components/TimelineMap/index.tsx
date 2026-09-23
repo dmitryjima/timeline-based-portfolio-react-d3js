@@ -5,8 +5,8 @@ import classNames from "classnames/bind";
 import type { TimelineNode, TimelineNodeData, TimelineTick } from "../../engine/types";
 import { TimelineEngine } from "../../engine";
 import {
-  MAX_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX,
-  MIN_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX,
+  MAX_TIMELINE_HORIZONTAL_SPACE_PER_YEAR_PX,
+  MIN_TIMELINE_HORIZONTAL_SPACE_PER_YEAR_PX,
   TIMELINE_HORIZONTAL_PADDING_PX,
   MONTH_TICK_HEIGHT_PX,
   YEAR_LABEL_TOP_OFFSET_PX,
@@ -24,9 +24,9 @@ const domainStart = new Date(2017, 0, 1);
 const domainEnd = new Date();
 const domainYears = domainEnd.getFullYear() - domainStart.getFullYear();
 const minContentWidth =
-  MIN_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX * domainYears + TIMELINE_HORIZONTAL_PADDING_PX * 2;
+  MIN_TIMELINE_HORIZONTAL_SPACE_PER_YEAR_PX * domainYears + TIMELINE_HORIZONTAL_PADDING_PX * 2;
 const maxContentWidth =
-  MAX_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX * domainYears + TIMELINE_HORIZONTAL_PADDING_PX * 2;
+  MAX_TIMELINE_HORIZONTAL_SPACE_PER_YEAR_PX * domainYears + TIMELINE_HORIZONTAL_PADDING_PX * 2;
 
 const TimelineMap: React.FC<Props> = ({ data }) => {
   const [scrollElementRef, { width: scrollWrapperWidth, height: scrollWrapperHeight }] =
