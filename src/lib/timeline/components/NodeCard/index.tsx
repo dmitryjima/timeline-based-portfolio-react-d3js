@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import classNames from "classnames/bind";
 import { CARD_CLOSED_HEIGHT_PX, CARD_WIDTH_PX } from "../../engine/constants";
 import { type TimelineNode } from "../../engine/types";
-import formatNodeTime from "../../../utls/formatNodeTime";
+import formatNodeTime from "../../../utils/formatNodeTime";
 
 const cx = classNames.bind(styles);
 

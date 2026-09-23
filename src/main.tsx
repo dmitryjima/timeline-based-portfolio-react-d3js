@@ -7,11 +7,11 @@ import App from "./App.tsx";
 import AppSection_1 from "./1-initial-setup-and-structure/App.tsx";
 import AppSection_2 from "./2-data-models-and-sample-data/App.tsx";
 import AppSection_3 from "./3-responsive-timeline-map/App.tsx";
-import AppSection_4 from "./4-putting-nodes-on-the-timeline/App.tsx";
+import AppSection_4 from "./4-putting-nodes-on-timeline/App.tsx";
 import AppSection_5 from "./5-putting-nodes-on-lanes/App.tsx";
 import AppSection_6 from "./6-drawing-lines-to-nodes/App.tsx";
 import AppSection_7 from "./7-rich-content-cards/App.tsx";
-import AppSection_8 from "./8-animating-the-resize/App.tsx";
+import AppSection_8 from "./8-animating-resize/App.tsx";
 
 import "./index.css";
 
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
     element: <AppSection_3 />,
   },
   {
-    path: "/4-putting-nodes-on-the-timeline",
+    path: "/4-putting-nodes-on-timeline",
     element: <AppSection_4 />,
   },
   {
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
     element: <AppSection_7 />,
   },
   {
-    path: "/8-animating-the-resize",
+    path: "/8-animating-resize",
     element: <AppSection_8 />,
   },
 ]);
