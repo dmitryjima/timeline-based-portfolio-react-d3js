@@ -45,9 +45,9 @@ The project was scaffolded with the standard Vite project initializer and TypeSc
 
 ### Key modules and structure
 
-Most of the code of interest is located in the [src/lib/timeline](src/lib/timeline) folder. There is also a time-formatting function in the [src/lib/utils](src/lib/utils).
+Most of the code of interest is located in the [src/lib/timeline](src/lib/timeline) folder. There is also a time-formatting function in the [src/lib/utils](src/lib/utils)
 
-* [src/lib/timeline/data](src/lib/timeline/data) - the sample data: a history of education, career milestones and projects. 
+* [src/lib/timeline/data](src/lib/timeline/data) - the sample data: a history of education, career milestones and projects
 * [src/lib/timeline/components](src/lib/timeline/components) - contains React Components `TimelineMap` and `NodeCard`.
   * [src/lib/timeline/components/TimelineMap](src/lib/timeline/components/TimelineMap) - "main" component for rendering the timeline. Takes the data as props, passes it to the engine for processing, and then renders the data over the x and y axes.
   * [src/lib/timeline/components/NodeCard](src/lib/timeline/components/NodeCard) - takes the data for an item as props and renders it as a card.
