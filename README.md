@@ -59,7 +59,7 @@ Most of the code of interest is located in the [src/lib/timeline](src/lib/timeli
   * [src/lib/timeline/engine/index.ts](src/lib/timeline/engine/index.ts) - the `TimelineEngine` class, responsbile for the calculations
 
 
-[src/App.tsx](src/App.tsx) is the application's entry point, it imports the sample data, implements a placeholder `handleOnNodeExpand` method, and passes them as props to the `TimelineMap` component. (In a real-life project, the data would likely come from an AJAX call, or fetched in a server-side handler, e.g. in case of Next.js).
+[src/App.tsx](App.tsx) is the application's entry point, it imports the sample data, implements a placeholder `handleOnNodeExpand` method, and passes them as props to the `TimelineMap` component. (In a real-life project, the data would likely come from an AJAX call, or fetched in a server-side handler, e.g. in case of Next.js).
 
 ## Sections and directories
 
