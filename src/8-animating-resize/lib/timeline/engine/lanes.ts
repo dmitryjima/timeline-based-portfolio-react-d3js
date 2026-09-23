@@ -25,7 +25,7 @@ export function assignLanes(
   nodes: LaneInput[],
   requiredGapMs: number,
 ): Map<string, LaneAssignment> {
-  // Sort nodes from earliest to lates, so each lane only needs to track
+  // Sort nodes from earliest to latest, so each lane only needs to track
   // the end time of its most recently assigned node.
   const sortedNodes = nodes.toSorted((a, b) => a.startMs - b.startMs);
 
