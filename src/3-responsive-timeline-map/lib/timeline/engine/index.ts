@@ -30,6 +30,13 @@ export class TimelineEngine {
     this.domainEnd = domainEnd;
     this.onUpdateTicks = onUpdateTicks;
 
+    // "Naive" version - no norizontal padding
+    // this.xScale = scaleTime()
+    //   // The input set, earliest and latest dates
+    //   .domain([this.domainStart, this.domainEnd])
+    //   // The output set, actual pixel coordinates on SVG
+    //   .range([0, width]);
+
     this.xScale = scaleTime()
       // The input set, earliest and latest dates
       .domain([this.domainStart, this.domainEnd])
@@ -43,6 +50,13 @@ export class TimelineEngine {
   }
 
   resize(newWidth: number) {
+    // "Naive" version - no norizontal padding
+    // this.xScale = scaleTime()
+    //   // The input set, earliest and latest dates
+    //   .domain([this.domainStart, this.domainEnd])
+    //   // The output set, actual pixel coordinates on SVG
+    //   .range([0, newWidth]);
+
     this.xScale.range([
       TIMELINE_HORIZONTAL_PADDING_PX,
       Math.max(newWidth - TIMELINE_HORIZONTAL_PADDING_PX, TIMELINE_HORIZONTAL_PADDING_PX),
@@ -56,13 +70,15 @@ export class TimelineEngine {
   }
 
   private updateTicks() {
-    const yearTicks = timeYear.range(this.domainStart, this.domainEnd).map((date) => ({
-      date,
-      x: this.xScale(date),
-      label: formatYear(date),
-    }));
+    const yearTicks: TimelineTick[] = timeYear
+      .range(this.domainStart, this.domainEnd)
+      .map((date) => ({
+        date,
+        x: this.xScale(date),
+        label: formatYear(date),
+      }));
 
-    const monthTicks = timeMonth
+    const monthTicks: TimelineTick[] = timeMonth
       .range(this.domainStart, this.domainEnd)
       .filter((date) => date.getMonth() !== 0) // Skip January, as it matches the positions of `yearTicks`
       .map((date) => ({
