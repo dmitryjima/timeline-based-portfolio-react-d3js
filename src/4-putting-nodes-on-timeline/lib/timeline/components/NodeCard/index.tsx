@@ -15,8 +15,10 @@ const NodeCard: React.FC<Props> = ({ node }) => {
         position: "absolute",
         left: `${node.x}px`,
         top: `${node.y}px`,
-        background: "gray",
         transform: "translate(-50%, -50%)",
+        background: "gray",
+        color: "white",
+        padding: "4px 6px",
       }}
     >
       {node.id}
