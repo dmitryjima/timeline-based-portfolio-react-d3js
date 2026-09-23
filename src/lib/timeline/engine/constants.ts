@@ -1,6 +1,11 @@
 // Horizontal space on both ends of the timeline content area
 export const TIMELINE_HORIZONTAL_PADDING_PX = 80;
 
+// Month and year ticks dimensions
+export const MONTH_TICK_HEIGHT_PX = 8;
+export const YEAR_LABEL_TOP_OFFSET_PX = 18;
+export const YEAR_LABEL_BOTTOM_OFFSET_PX = 12;
+
 // Width of the `NodeCard` in px
 export const CARD_WIDTH_PX = 260;
 // Height of the `NodeCard` in its initial state

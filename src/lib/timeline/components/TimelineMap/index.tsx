@@ -9,6 +9,9 @@ import {
   MAX_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX,
   MIN_TIMELINE_HORIZONTAL_PADDING_PER_YEAR_PX,
   TIMELINE_HORIZONTAL_PADDING_PX,
+  MONTH_TICK_HEIGHT_PX,
+  YEAR_LABEL_TOP_OFFSET_PX,
+  YEAR_LABEL_BOTTOM_OFFSET_PX,
 } from "../../engine/constants";
 import NodeCard from "../NodeCard";
 
@@ -106,8 +109,8 @@ const TimelineMap: React.FC<Props> = ({ data, onNodeExpand }) => {
                   className={cx(styles["month-tick"])}
                   x1={tick.x}
                   x2={tick.x}
-                  y1={scrollWrapperHeight / 2 - 4}
-                  y2={scrollWrapperHeight / 2 + 4}
+                  y1={axisY - MONTH_TICK_HEIGHT_PX / 2}
+                  y2={axisY + MONTH_TICK_HEIGHT_PX / 2}
                 />
               );
             })}
@@ -116,7 +119,7 @@ const TimelineMap: React.FC<Props> = ({ data, onNodeExpand }) => {
             {yearTicks.map((tick, i) => {
               return (
                 <Fragment key={i}>
-                  <text className={styles["year-label"]} x={tick.x} y={18}>
+                  <text className={styles["year-label"]} x={tick.x} y={YEAR_LABEL_TOP_OFFSET_PX}>
                     {tick.label}
                   </text>
                   <line
@@ -126,7 +129,11 @@ const TimelineMap: React.FC<Props> = ({ data, onNodeExpand }) => {
                     y1={0}
                     y2={scrollWrapperHeight}
                   />
-                  <text className={styles["year-label"]} x={tick.x} y={scrollWrapperHeight - 12}>
+                  <text
+                    className={styles["year-label"]}
+                    x={tick.x}
+                    y={scrollWrapperHeight - YEAR_LABEL_BOTTOM_OFFSET_PX}
+                  >
                     {tick.label}
                   </text>
                 </Fragment>
