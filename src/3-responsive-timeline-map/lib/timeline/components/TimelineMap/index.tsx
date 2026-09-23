@@ -59,8 +59,8 @@ const TimelineMap: React.FC<Props> = ({ data }) => {
       // Instantiate the TimelineEngine if not present
       timelineEngineInstanceRef.current = new TimelineEngine({
         data,
-        domainStart: new Date(2017, 0, 1),
-        domainEnd: new Date(),
+        domainStart: domainStart,
+        domainEnd: domainEnd,
         width: contentWidth,
         onUpdateTicks: handleUpdateTicks,
       });
