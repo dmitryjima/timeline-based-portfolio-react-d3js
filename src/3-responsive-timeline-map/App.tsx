@@ -1,4 +1,5 @@
 import "./App.css";
+// import TimelineMap from "./lib/timeline/components/TimelineMap/index_naive";
 import TimelineMap from "./lib/timeline/components/TimelineMap";
 import { data } from "./lib/timeline/data";
 
