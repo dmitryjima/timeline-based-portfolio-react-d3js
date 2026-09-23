@@ -6,8 +6,5 @@ declare const classNames: {
   readonly "month-tick": "month-tick";
   readonly "year-tick": "year-tick";
   readonly "year-label": "year-label";
-  readonly connector: "connector";
-  readonly commitment: "commitment";
-  readonly project: "project";
 };
 export = classNames;
