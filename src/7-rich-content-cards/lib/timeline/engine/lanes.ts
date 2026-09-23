@@ -73,7 +73,7 @@ export function assignLanes(
     }
 
     if (!placed) {
-      // If we couldn't place a node, it means that none of the existing nodes would do,
+      // If we couldn't place a node, it means that none of the existing lanes would do,
       // because they overlap the node. Thuts, we create a new lane on the first side from `sidesToTry`
       const side = sidesToTry[0];
 
