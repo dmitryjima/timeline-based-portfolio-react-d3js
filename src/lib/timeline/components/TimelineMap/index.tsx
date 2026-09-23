@@ -96,13 +96,7 @@ const TimelineMap: React.FC<Props> = ({ data, onNodeExpand }) => {
             aria-hidden={true}
           >
             {/* Baseline */}
-            <line
-              className={styles["baseline"]}
-              x1={0}
-              x2={contentWidth}
-              y1={scrollWrapperHeight / 2}
-              y2={scrollWrapperHeight / 2}
-            />
+            <line className={styles["baseline"]} x1={0} x2={contentWidth} y1={axisY} y2={axisY} />
 
             {/* Month ticks */}
             {monthTicks.map((tick, i) => {
