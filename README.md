@@ -2,7 +2,7 @@
 
 This the complete code for the [tutorial](https://www.zdcreatech.com/blog/onclick-tutorials/timeline-based-portfolio-react-d3js) on how to build a responsive timeline-based portfolio with React, TypeScript, and D3.js. 
 
-Each branch in the repository represents a different section of the tutorial, the deployed demo is available [here](https://timeline-based-portfolio-react-d3js.zdcreatech.com).
+Each subfolder in the `src/lib/` directory represents a different section of the tutorial, the deployed demo is available [here](https://timeline-based-portfolio-react-d3js.zdcreatech.com).
 
 Feel free to clone/fork/refer to this repository, and build an awesome portfolio that represents you best!
 
@@ -59,7 +59,7 @@ Most of the code of interest is located in the [src/lib/timeline](src/lib/timeli
   * [src/lib/timeline/engine/index.ts](src/lib/timeline/engine/index.ts) - the `TimelineEngine` class, responsbile for the calculations
 
 
-[src/App.tsx](App.tsx) is the application's entry point, it imports the sample data, implements a placeholder `handleOnNodeExpand` method, and passes them as props to the `TimelineMap` component. (In a real-life project, the data would likely come from an AJAX call, or fetched in a server-side handler, e.g. in case of Next.js).
+[src/App.tsx](src/App.tsx) is the application's entry point, it imports the sample data, implements a placeholder `handleOnNodeExpand` method, and passes them as props to the `TimelineMap` component. (In a real-life project, the data would likely come from an AJAX call, or fetched in a server-side handler, e.g. in case of Next.js).
 
 ## Sections and directories
 
