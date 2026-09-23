@@ -1,5 +1,5 @@
 import { scaleTime, type ScaleTime } from "d3-scale";
-import { easeCubicInOut, interpolateNumber, timeFormat, timeMonth, timeYear } from "d3";
+import { timeFormat, timeMonth, timeYear } from "d3";
 import type { TimelineNodeData, TimelineNode, TimelineTick } from "./types";
 import { assignLanes } from "./lanes";
 import {
