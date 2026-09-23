@@ -44,7 +44,7 @@ export function assignLanes(
     const lessUsedSide: DisplaySide =
       laneEnds.above.length <= laneEnds.below.length ? "above" : "below";
 
-    // If node has a preferred side, we try it firs.
+    // If node has a preferred side, we try it first.
     // Otherwise, try the currently less-used side first.
     // In both cases, the opposite side is the fallback
     const sidesToTry: DisplaySide[] = node.preferredSide

@@ -67,7 +67,6 @@ export class TimelineEngine {
       laneIndex: 0,
     }));
 
-    // Calculate and apply the layout, updating stateful values now lives inside of it
     this.applyLayout(this.calculateLayout(axisY));
   }
 
