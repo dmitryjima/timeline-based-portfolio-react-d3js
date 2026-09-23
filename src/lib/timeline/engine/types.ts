@@ -30,8 +30,8 @@ export interface TimelineNode extends TimelineNodeData {
 }
 
 // Year and month ticks on the timeline map
-export type TimelineTick = {
+export interface TimelineTick {
   date: Date;
   x: number;
   label: string;
-};
+}
