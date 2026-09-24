@@ -67,7 +67,9 @@ export class TimelineEngine {
       laneIndex: 0,
     }));
 
-    this.applyLayout(this.calculateLayout(axisY));
+    const targetLayout = this.calculateLayout(axisY);
+
+    this.applyLayout(targetLayout);
   }
 
   resize(newWidth: number, newAxisY: number) {
