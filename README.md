@@ -2,7 +2,7 @@
 
 This the complete code for the [tutorial](https://www.zdcreatech.com/blog/onclick-tutorials/timeline-based-portfolio-react-d3js) on how to build a responsive timeline-based portfolio with React, TypeScript, and D3.js. 
 
-Each subfolder in the `src/lib/` directory represents a different section of the tutorial, the deployed demo is available [here](https://timeline-based-portfolio-react-d3js.zdcreatech.com).
+Each subfolder in the `src/lib/` directory represents a different section of the tutorial, the deployed demo is available [here](https://timeline-based-portolfio-react-d3js.zdcreatech.com/). 
 
 Feel free to clone/fork/refer to this repository, and build an awesome portfolio that represents you best!
 
