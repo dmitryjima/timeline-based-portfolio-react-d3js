@@ -81,7 +81,7 @@ export class TimelineEngine {
     this.animateTo(targetLayout);
   }
 
-  // Now we also have a destroy function, to avoid memory leaks if the `TimelineMap` unmounts during the animation
+  // A destroy function, to avoid memory leaks if the `TimelineMap` unmounts during the animation
   destroy() {
     if (this.animationFrame !== undefined) {
       cancelAnimationFrame(this.animationFrame);
