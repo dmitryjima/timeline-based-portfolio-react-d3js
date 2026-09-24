@@ -32,7 +32,7 @@ You can also run linting and formatting with `npm run lint` and `npm run format`
 
 ## Architecture
 
-The project was scaffolded with the standard Vite project initializer and TypeScript template `npm create . --template react-ts`, uses Eslint and and Prettier for code linting and formatting.
+The project was scaffolded with the standard Vite project initializer and TypeScript template `npm create . --template react-ts`, uses Eslint and Prettier for code linting and formatting.
 
 ### Core libraries
 
@@ -56,7 +56,7 @@ Most of the code of interest is located in the [src/lib/timeline](src/lib/timeli
   * [src/lib/timeline/engine/types.ts](src/lib/timeline/engine/types.ts) - shared types and interfaces
   * [src/lib/timeline/engine/lanes.ts](src/lib/timeline/engine/lanes.ts) - logic for distributing the nodes over the lanes and avoiding collisions.
   * [src/lib/timeline/engine/paths.ts](src/lib/timeline/engine/paths.ts) - logic for drawing SVG `path`s to the nodes
-  * [src/lib/timeline/engine/index.ts](src/lib/timeline/engine/index.ts) - the `TimelineEngine` class, responsbile for the calculations
+  * [src/lib/timeline/engine/index.ts](src/lib/timeline/engine/index.ts) - the `TimelineEngine` class, responsible for the calculations
 
 
 [src/App.tsx](App.tsx) is the application's entry point, it imports the sample data, implements a placeholder `handleOnNodeExpand` method, and passes them as props to the `TimelineMap` component. (In a real-life project, the data would likely come from an AJAX call, or fetched in a server-side handler, e.g. in case of Next.js).
@@ -65,7 +65,7 @@ Most of the code of interest is located in the [src/lib/timeline](src/lib/timeli
 
 * [Initial setup and structure](src/1-initial-setup-and-structure)
 * [Data models and sample data](src/2-data-models-and-sample-data)
-* [Reponsive timeline map](src/3-responsive-timeline-map)
+* [Responsive timeline map](src/3-responsive-timeline-map)
 * [Putting nodes on timeline](src/4-putting-nodes-on-timeline)
 * [Putting nodes on lanes](src/5-putting-nodes-on-lanes)
 * [Drawing lines to nodes](src/6-drawing-lines-to-nodes)

@@ -11,7 +11,7 @@ Triggered expand for node with id "${node.id}"
 ______________
 
 Here you would put the logic for the most interesting parts: opening the modal, handling a programmatic redirect, etc. 
-You could also extended the function to pass the DomRect of the card, or a ref to the element itself to implement visual effects and animations.
+You could also extend the function to pass the DomRect of the card, or a ref to the element itself to implement visual effects and animations.
       `,
     );
   };
