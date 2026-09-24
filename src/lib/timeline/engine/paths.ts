@@ -49,7 +49,7 @@ export function bridgePathCurved(
   const _curve = Math.min(curve, span);
   // The larger the `riseEndX` value in this case, the smoother will be the curve
   const riseEndX = startX + _curve;
-  // Then end point, where the curve ends on the lanes
+  // Then end point, where the curve ends on the lane
   const riseQuandraticBezierEndPoint = `${riseEndX} ${laneY}`;
 
   const rise = `
